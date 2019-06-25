@@ -4,12 +4,12 @@ except :
   print('Need selenium to run try : \n\tpip install selenium')
 import os
 def main():
-	driver = webdriver.Chrome()
+	driver = webdriver.Chrome()						# the path need to be specified
 	driver.get('https://web.whatsapp.com/')
-	name = input('Enter the name of user or group: ')
+	name = input('Enter the name of user or group: ')	
 	msg = input('Enter your message: ')
-	count = int(input('Enter the count: '))
-	input('Enter any key after scanning QR code')
+	count = int(input('Enter the count: '))					# what is this count for
+	input('Enter any key after scanning QR code')				# use the whatsapp web
 	user = driver.find_element_by_xpath('//span[@title = "{}"]'.format(name))
 	user.click()
 
